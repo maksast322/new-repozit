@@ -2,8 +2,8 @@
 .venv
 .env
 
-# python
-__pycache__
-
 # log
 *.log
+
+# python
+__pycache__

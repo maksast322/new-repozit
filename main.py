@@ -1,8 +1,14 @@
-from ui.user_menu import test
+from loguru import logger
+from controller import controller
+
 
 def main():
-  test()
+    logger.add("file.log",
+               format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {name} | {message}",
+               level="INFO",
+               rotation="10 MB")
+    controller()
 
 
-if __name__ == "__main__":
-  main()
+if __name__ == '__main__':
+    main()
